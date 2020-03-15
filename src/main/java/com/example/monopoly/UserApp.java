@@ -16,7 +16,7 @@ public class UserApp {
         userDao.delete(user2);
         userDao.save(new Player(1, "Julia"));
 
-        userDao.getAll().forEach(player -> System.out.println(player.getName()));
+        userDao.getAll().forEach(user -> System.out.println(user.getName()));
     }
 
     private static Player getUser(long id) {
