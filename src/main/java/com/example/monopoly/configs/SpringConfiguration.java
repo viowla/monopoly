@@ -1,4 +1,4 @@
-package com.example.monopoly;
+package com.example.monopoly.configs;
 
 import com.example.monopoly.models.*;
 import com.example.monopoly.models.squares.*;
