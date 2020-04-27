@@ -1,6 +1,7 @@
 package com.example.monopoly.models;
 
 import com.example.monopoly.*;
+import com.example.monopoly.models.squares.*;
 
 import java.util.Random;
 

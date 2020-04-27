@@ -1,5 +1,8 @@
-package com.example.monopoly.models;
+package com.example.monopoly.models.squares;
 
+
+import com.example.monopoly.models.Board;
+import com.example.monopoly.models.Player;
 
 public class Square {
     String name;

@@ -1,9 +1,9 @@
-package com.example.monopoly.models;
+package com.example.monopoly.models.squares;
 
 import com.example.monopoly.Observer;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.Player;
-import com.example.monopoly.models.Square;
+import com.example.monopoly.models.squares.Square;
 
 public class GoToJailSquare extends Square {
     public GoToJailSquare(String name) {
