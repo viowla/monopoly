@@ -1,6 +1,9 @@
 package com.example.monopoly;
 
-import java.util.ArrayList;
+import com.example.monopoly.models.Board;
+import com.example.monopoly.models.Dice;
+import com.example.monopoly.models.Player;
+
 import java.util.Scanner;
 
 public class Monopoly {

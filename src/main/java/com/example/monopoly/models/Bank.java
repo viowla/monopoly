@@ -1,4 +1,4 @@
-package com.example.monopoly;
+package com.example.monopoly.models;
 
 public class Bank {
     int money;

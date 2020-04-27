@@ -1,6 +1,4 @@
-package com.example.monopoly;
-
-import org.springframework.stereotype.Component;
+package com.example.monopoly.models;
 
 
 public class Square {

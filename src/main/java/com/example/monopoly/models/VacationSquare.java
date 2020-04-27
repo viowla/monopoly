@@ -1,5 +1,7 @@
-package com.example.monopoly;
+package com.example.monopoly.models;
 
+
+import com.example.monopoly.Observer;
 
 import java.util.Random;
 

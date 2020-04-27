@@ -1,6 +1,8 @@
-package com.example.monopoly;
+package com.example.monopoly.models;
 
-import java.util.ArrayList;
+import com.example.monopoly.Observer;
+import com.example.monopoly.models.Bank;
+import com.example.monopoly.models.Dice;
 
 public class Player {
     int totalWalk = 0;
