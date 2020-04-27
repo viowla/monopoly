@@ -3,7 +3,11 @@ package com.example.monopoly.models;
 import com.example.monopoly.Observer;
 import com.example.monopoly.models.Bank;
 import com.example.monopoly.models.Dice;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Player {
     int totalWalk = 0;
     int position = 0;
@@ -17,9 +21,9 @@ public class Player {
         this.name = name;
     }
 
-    public int getTotalWalk() {
+   /* public int getTotalWalk() {
         return totalWalk;
-    }
+    }*/
 
     public int tossDie(Dice die) {
         int face = die.setDice();
@@ -27,19 +31,19 @@ public class Player {
         return face;
     }
 
-    public int getCurrentPosition() {
+   /* public int getCurrentPosition() {
         return position;
     }
 
     public void setPosition(int position) {
         this.position = position;
-    }
+    }*/
 
     public void nextTurn() {
         totalWalk++;
     }
 
-    public String getName() {
+   /* public String getName() {
         return name;
     }
 
@@ -61,9 +65,9 @@ public class Player {
 
     public void setBrokeOut(boolean brokeout) {
         this.brokeout = brokeout;
-    }
+    }*/
 
-    public boolean isBrokeOut() {
+    /*public boolean isBrokeOut() {
         return brokeout;
-    }
+    }*/
 }
