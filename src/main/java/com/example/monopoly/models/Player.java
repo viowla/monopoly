@@ -67,7 +67,7 @@ public class Player {
         this.brokeout = brokeout;
     }*/
 
-    /*public boolean isBrokeOut() {
+    public boolean isBrokeOut() {
         return brokeout;
-    }*/
+    }
 }
