@@ -27,7 +27,7 @@ public class Player {
 
     public int tossDie(Dice die) {
         int face = die.setDice();
-        Observer.print(this, getName() + " toss a die... Face is " + face);
+        Observer.print(this, name + " toss a die... Face is " + face);
         return face;
     }
 
