@@ -1,13 +1,13 @@
 package com.example.monopoly.models;
 
 import com.example.monopoly.Observer;
-import com.example.monopoly.models.Bank;
-import com.example.monopoly.models.Dice;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Player {
     int totalWalk = 0;
     int position = 0;
@@ -27,7 +27,7 @@ public class Player {
 
     public int tossDie(Dice die) {
         int face = die.setDice();
-        Observer.print(this, name + " toss a die... Face is " + face);
+        Observer.print(this, getName() + " toss a die... Face is " + face);
         return face;
     }
 

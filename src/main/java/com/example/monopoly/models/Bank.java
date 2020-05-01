@@ -1,5 +1,8 @@
 package com.example.monopoly.models;
 
+import lombok.Getter;
+
+@Getter
 public class Bank {
     int money;
 
@@ -11,9 +14,9 @@ public class Bank {
         this.money = money;
     }
 
-    public int getMoney() {
+    /*public int getMoney() {
         return money;
-    }
+    }*/
 
     public void addMoney(int amount) {
         money += amount;
