@@ -13,12 +13,12 @@ import lombok.Setter;
 public class Player {
     int totalWalk = 0;
     int position = 0;
-    int id;
+    Long id;
     String name;
     boolean brokeout = false;
     Bank money = new Bank(5000);
 
-    public Player(int id, String name) {
+    public Player(Long id, String name) {
         this.id = id;
         this.name = name;
     }
