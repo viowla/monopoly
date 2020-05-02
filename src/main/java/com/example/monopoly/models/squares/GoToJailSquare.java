@@ -1,5 +1,6 @@
 package com.example.monopoly.models.squares;
 
+import com.example.monopoly.controllers.BoardController;
 import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.roles.Player;
@@ -10,8 +11,8 @@ public class GoToJailSquare extends Square {
     }
 
     @Override
-    public void doAction(Player player, Board board) {
+    public void doAction(Player player, BoardController boardController) {
         Observer.print(player, player.getName() + " has go to Jail");
-        board.movePlayer(player, -board.getTotalSquare() / 2, false);
+        boardController.movePlayer(player, -boardController.getTotalSquare() / 2, false);
     }
 }

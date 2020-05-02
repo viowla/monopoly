@@ -7,6 +7,7 @@ import com.example.monopoly.models.roles.Player;;
 public class MonopolyController {
     Board board;
     Dice die = new Dice();
+    BoardController boardController;
 
     public MonopolyController(int totalPlayer) {
         board = new Board(totalPlayer);
@@ -16,16 +17,16 @@ public class MonopolyController {
     public void startGame() {
         System.out.println("Game start!");
         System.out.println("------------------------------");
-        while (!isGameEnd() && !board.hasWinner()){
+        while (!isGameEnd() && !boardController.hasWinner()){
             if(!board.getCurrentPlayer().isBrokeOut()){
                 int face = board.getCurrentPlayer().tossDie(die);
-                board.movePlayer(board.getCurrentPlayer(), face);
+                boardController.movePlayer(board.getCurrentPlayer(), face);
             }
             board.nextTurn();
         }
         System.out.println("--------------------------------");
-        if(board.hasWinner()){
-            System.out.println(board.getWinner().getName() + " is won by don't brokeout!");
+        if(boardController.hasWinner()){
+            System.out.println(boardController.getWinner().getName() + " is won by don't brokeout!");
         }else{
             System.out.println(board.getMaxMoneyPlayer().getName() + " is won by have most money!");
         }

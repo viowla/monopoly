@@ -10,7 +10,7 @@ public class JailSquare extends Square {
     }
 
     @Override
-    public void doAction(Player player, Board board) {
+    public void doAction(Player player) {
         Observer.print(player, player.getName() + " has been Jail and lost 500 money");
         player.getMoney().substractMoney(500);
     }

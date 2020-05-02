@@ -1,6 +1,7 @@
 package com.example.monopoly.models.squares;
 
 
+import com.example.monopoly.controllers.BoardController;
 import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.roles.Player;
@@ -13,9 +14,9 @@ public class VacationSquare extends Square {
     }
 
     @Override
-    public void doAction(Player player, Board board) {
+    public void doAction(Player player, BoardController boardController) {
         Random rand = new Random();
-        Square square = board.movePlayer(player, rand.nextInt(board.getTotalSquare()), false);
+        Square square = boardController.movePlayer(player, rand.nextInt(boardController.getTotalSquare()), false);
         Observer.print(player, player.getName() + " has go to vacation at " + square.getName());
     }
 }
