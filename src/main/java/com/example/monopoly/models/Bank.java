@@ -2,9 +2,9 @@ package com.example.monopoly.models;
 
 import lombok.Getter;
 
-@Getter
+
 public class Bank {
-    int money;
+    @Getter int money;
 
     public Bank() {
         this(0);
@@ -13,10 +13,6 @@ public class Bank {
     public Bank(int money) {
         this.money = money;
     }
-
-    /*public int getMoney() {
-        return money;
-    }*/
 
     public void addMoney(int amount) {
         money += amount;
