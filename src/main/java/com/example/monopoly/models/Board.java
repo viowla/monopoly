@@ -4,12 +4,15 @@ package com.example.monopoly.models;
 import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.models.squares.*;
 
+import javax.persistence.ManyToOne;
 import java.util.Random;
 
 public class Board {
     int currentTurn = 0;
     int totalPlayer = 0;
+    @ManyToOne
     Player[] players;
+    @ManyToOne
     Square[] squares = new Square[40];
     String[] names = new String[] { "House", "Villa", "Town", "City", "Peace", "Village", "Jade", "Soi 4", "White", "Dark" };
 
