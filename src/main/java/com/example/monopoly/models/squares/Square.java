@@ -2,7 +2,7 @@ package com.example.monopoly.models.squares;
 
 
 import com.example.monopoly.models.Board;
-import com.example.monopoly.models.Player;
+import com.example.monopoly.models.roles.Player;
 import lombok.Getter;
 import lombok.Setter;
 

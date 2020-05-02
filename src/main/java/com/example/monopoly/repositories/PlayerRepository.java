@@ -1,6 +1,6 @@
 package com.example.monopoly.repositories;
 
-import com.example.monopoly.models.Player;
+import com.example.monopoly.models.roles.Player;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 

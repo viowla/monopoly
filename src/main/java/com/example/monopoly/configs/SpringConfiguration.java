@@ -1,6 +1,6 @@
 package com.example.monopoly.configs;
 
-import com.example.monopoly.models.*;
+import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.models.squares.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

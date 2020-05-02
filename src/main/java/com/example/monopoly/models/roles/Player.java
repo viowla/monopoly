@@ -1,6 +1,8 @@
-package com.example.monopoly.models;
+package com.example.monopoly.models.roles;
 
-import com.example.monopoly.Observer;
+import com.example.monopoly.models.Bank;
+import com.example.monopoly.models.Dice;
+import com.example.monopoly.models.roles.Observer;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

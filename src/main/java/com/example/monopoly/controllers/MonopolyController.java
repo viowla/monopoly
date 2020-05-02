@@ -2,7 +2,7 @@ package com.example.monopoly.controllers;
 
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.Dice;
-import com.example.monopoly.models.Player;;
+import com.example.monopoly.models.roles.Player;;
 
 public class MonopolyController {
     Board board;
