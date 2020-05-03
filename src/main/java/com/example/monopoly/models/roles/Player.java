@@ -87,4 +87,48 @@ public class Player implements UserDetails {
     public String getUsername() {
         return username;
     }
+
+
+    /*--------------------------*/
+    public int getCurrentPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Bank getMoney() {
+        return money;
+    }
+
+    public Long getID() {
+        return id;
+    }
+
+    public void setBrokeOut(boolean brokeout) {
+        this.brokeout = brokeout;
+    }
+
+    public boolean isBrokeOut() {
+        return brokeout;
+    }
+
+    public int getTotalWalk() {
+        return totalWalk;
+    }
+
+    /*---------------------------*/
+
+    public void setPassword(String password) {
+        this.password = password;
+}
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }

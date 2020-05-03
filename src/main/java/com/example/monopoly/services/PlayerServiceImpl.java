@@ -13,6 +13,7 @@ import java.util.List;
 public class PlayerServiceImpl implements PlayerService, UserDetailsService {
 
     @Autowired
+
     private PlayerRepository playerRepository;
 
     @Autowired

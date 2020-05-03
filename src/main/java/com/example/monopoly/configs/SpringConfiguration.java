@@ -1,40 +1,27 @@
 package com.example.monopoly.configs;
 
-import com.example.monopoly.models.roles.Player;
-import com.example.monopoly.models.squares.*;
+
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@ComponentScan("com.example.monopoly")
-@PropertySource("application.properties")
+@EnableSwagger2
 public class SpringConfiguration {
     @Bean
-    public List<Player> playerList(){
-List<Player>playerList = new ArrayList<>();
-playerList.add(new Player(1, "user1"));
-playerList.add(new Player(2, "user2"));
-playerList.add(new Player(3, "user3"));
-playerList.add(new Player(4, "user4"));
-playerList.add(new Player(5, "user5"));
-return playerList;
-    }
-
-    @Bean
-    public List<Square> squareList(){
-        List<Square> squareList=new ArrayList<>();
-        squareList.add(new GoSquare("Go Square"));
-        squareList.add(new GoToJailSquare("Go to jail square"));
-        squareList.add(new HouseSquare("house square",200));
-        squareList.add(new JailSquare("Jail square"));
-        squareList.add(new VacationSquare("Vacation square"));
-
-        return squareList;
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("kz.iitu.monopoly"))
+                .paths(PathSelectors.ant("/api/*"))
+                .build();
     }
 
 }

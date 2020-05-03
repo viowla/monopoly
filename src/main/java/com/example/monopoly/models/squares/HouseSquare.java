@@ -19,13 +19,13 @@ public class HouseSquare extends Square {
         this.price = price;
     }
 
-    /*public void setOwner(int owner) {
+    public void setOwner(int owner) {
         this.owner = owner;
     }
 
     public int getPrice() {
         return price;
-    }*/
+    }
 
     @Override
     public void doAction(Player player, Board board) {
@@ -34,7 +34,7 @@ public class HouseSquare extends Square {
             Random rand = new Random();
             if(rand.nextBoolean()){
                 Observer.print(player, player.getName() + " buy " + getName() + " for " + price);
-                owner = player.getID();
+                owner = Math.toIntExact(player.getID());
                 player.getMoney().substractMoney(price);
             }else{
                 Observer.print(player, player.getName() + " don't want to buy " + getName());
