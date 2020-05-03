@@ -1,5 +1,6 @@
 package com.example.monopoly.controllers;
 
+import com.example.monopoly.exceptions.FreeRentException;
 import com.example.monopoly.services.exceptionService.EconomicService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class ApiController {
     @Autowired
     private EconomicService economicService;
 
-    @GetMapping("/divide")
-    public ResponseEntity<?> divide(@RequestParam int a, @RequestParam int b) {
+    @GetMapping("/rent")
+    public ResponseEntity<?> divide(@RequestParam int a, @RequestParam int b) throws FreeRentException {
         return ResponseEntity.ok(economicService.rent(a));
     }
 
