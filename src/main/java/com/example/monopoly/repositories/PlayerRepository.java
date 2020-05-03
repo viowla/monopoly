@@ -41,5 +41,7 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     @Override
     <S extends Player> boolean exists(Example<S> example);
 
+    public Player findUserByUsername(String username);
+
 
 }

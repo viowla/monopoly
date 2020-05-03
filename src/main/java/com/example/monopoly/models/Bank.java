@@ -14,10 +14,6 @@ public class Bank {
         this.money = money;
     }
 
-    /*public int getMoney() {
-        return money;
-    }*/
-
     public void addMoney(int amount) {
         money += amount;
     }

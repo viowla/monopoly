@@ -12,9 +12,5 @@ public abstract class Square {
         this.name = name;
     }
 
-   /* public String getName() {
-        return name;
-    }*/
-
     public abstract void doAction(Player player, Board board);
 }

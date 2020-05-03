@@ -37,7 +37,7 @@ public class PlayerServiceImpl implements PlayerService, UserDetailsService {
             userDb.setUsername(user.getUsername());
             userDb.setPassword(user.getPassword()); // plaintext password
 
-            Player.saveAndFlush(userDb);
+            playerRepository.saveAndFlush(userDb);
         }
     }
 
