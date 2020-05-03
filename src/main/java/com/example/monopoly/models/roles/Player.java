@@ -4,14 +4,16 @@ import com.example.monopoly.models.Bank;
 import com.example.monopoly.models.Dice;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 
 @Getter
 @Setter
-public class Player {
+public class Player implements UserDetails {
     int totalWalk = 0;
     int position = 0;
     @Id
@@ -19,6 +21,19 @@ public class Player {
     Long id;
     String name;
     boolean brokeout = false;
+
+    @Column(unique = true)
+    private String username;
+    private String password;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")}
+    )
+    private List<Roles> roles;
+
+    @OneToOne
     Bank money = new Bank(5000);
 
     public Player(Long id, String name) {
@@ -26,45 +41,43 @@ public class Player {
         this.name = name;
     }
 
-    /*public int getTotalWalk() {
-        return totalWalk;
-    }*/
-
     public int tossDie(Dice die) {
         int face = die.getFace();
         Observer.print(this, getName() + " toss a die... Face is " + face);
         return face;
     }
 
-   /* public int getCurrentPosition() {
-        return position;
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }*/
-
-    /*public void nextTurn() {
-        totalWalk++;
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
     }
 
-    public Bank getMoney() {
-        return money;
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
-    public Long getID() {
-        return id;
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles;
     }
 
-    public void setBrokeOut(boolean brokeout) {
-        this.brokeout = brokeout;
+    public String getPassword() {
+        return password;
     }
 
-    public boolean isBrokeOut() {
-        return brokeout;
-    }*/
+    @Override
+    public String getUsername() {
+        return username;
+    }
 }
