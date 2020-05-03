@@ -4,10 +4,7 @@ package com.example.monopoly.controllers;
 import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.repositories.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,26 @@ public class PlayerController {
     public List<Player> findPlayerById(@PathVariable("id") Long id){
         return (List<Player>) playerRepository.findById(id).get();
     }
+
+    @DeleteMapping("/")
+    public void deleteAllPlayers(){playerRepository.deleteAll();}
+
+    @DeleteMapping("/{id}")
+    public void deletePlayerById(@PathVariable("id") Long id){
+        playerRepository.deleteById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Player updatePlayer(@PathVariable("id") Long id,
+                               @RequestBody Player player){
+        player.setId(id);
+        return  playerRepository.saveAndFlush(player);
+    }
+
+    @PostMapping("")
+    public Player createPlayer(@RequestBody Player player){
+        return playerRepository.saveAndFlush(player);
+    }
+
 
 }
