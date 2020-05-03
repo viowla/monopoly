@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class EconomicService {
 
+    public EconomicService(String message) {
+    }
+
     public int rent(int cost) throws FreeRentException{
         if (cost==0){
             throw new FreeRentException("You can't give free rent!");
@@ -16,4 +19,7 @@ public class EconomicService {
     public int testException(){
         throw new NullPointerException("Exception");
     }
+
+
+
 }
