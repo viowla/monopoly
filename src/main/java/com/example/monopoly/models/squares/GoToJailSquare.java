@@ -11,8 +11,8 @@ public class GoToJailSquare extends Square {
     }
 
     @Override
-    public void doAction(Player player, BoardController boardController) {
+    public void doAction(Player player, Board board) {
         Observer.print(player, player.getName() + " has go to Jail");
-        boardController.movePlayer(player, -boardController.getTotalSquare() / 2, false);
+        board.movePlayer(player, -board.getTotalSquare() / 2, false);
     }
 }

@@ -4,7 +4,7 @@ import lombok.Getter;
 
 
 public class Bank {
-    @Getter int money;
+    int money;
 
     public Bank() {
         this(0);
@@ -14,4 +14,19 @@ public class Bank {
         this.money = money;
     }
 
+    public int getMoney() {
+        return money;
+    }
+
+    public void addMoney(int amount) {
+        money += amount;
+    }
+
+    public void substractMoney(int amount) {
+        money -= amount;
+    }
+
+    public boolean isBrokeOut() {
+        return money < 0;
+    }
 }

@@ -1,10 +1,12 @@
 package com.example.monopoly.models;
 
-import lombok.Setter;
-
 import java.util.Random;
 
-@Setter
+
 public class Dice {
-    int dice=(int) (Math.random()*6+1);
+    public int getFace() {
+        Random rand = new Random();
+        int face = 1+rand.nextInt(6);
+        return face;
+    }
 }

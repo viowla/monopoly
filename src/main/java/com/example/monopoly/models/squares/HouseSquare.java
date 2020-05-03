@@ -1,8 +1,7 @@
 package com.example.monopoly.models.squares;
 
-import com.example.monopoly.controllers.BoardController;
-import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.Board;
+import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.roles.Player;
 
 import java.util.Random;
@@ -25,7 +24,7 @@ public class HouseSquare extends Square {
     }
 
     @Override
-    public void doAction(Player player, BoardController boardController) {
+    public void doAction(Player player, Board board) {
         if(owner < 0){
             Observer.print(player, player.getName() + ", do you want to buy " + getName() + "?");
             Random rand = new Random();
@@ -39,9 +38,9 @@ public class HouseSquare extends Square {
         }else{
             if(owner != player.getID()){
                 int lost = price * 70 / 100;
-                Observer.print(player, player.getName() + " lost " + lost + " money to " + boardController.getPlayer(owner).getName());
+                Observer.print(player, player.getName() + " lost " + lost + " money to " + board.getPlayer(owner).getName());
                 player.getMoney().substractMoney(lost);
-                boardController.getPlayer(owner).getMoney().addMoney(lost);
+                board.getPlayer(owner).getMoney().addMoney(lost);
             }
         }
     }
