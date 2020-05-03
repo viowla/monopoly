@@ -1,7 +1,8 @@
-package com.example.monopoly.services;
+package com.example.monopoly.services.playersServices;
 
 import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.repositories.PlayerRepository;
+import com.example.monopoly.services.playersServices.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

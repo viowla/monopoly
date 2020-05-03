@@ -1,4 +1,4 @@
-package com.example.monopoly.services;
+package com.example.monopoly.services.playersServices;
 
 import com.example.monopoly.models.roles.Player;
 

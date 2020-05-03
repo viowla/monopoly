@@ -1,4 +1,4 @@
-package com.example.monopoly.services;
+package com.example.monopoly.services.exceptionService;
 
 import com.example.monopoly.exceptions.FreeRentException;
 import org.springframework.stereotype.Service;

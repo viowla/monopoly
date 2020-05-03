@@ -1,6 +1,6 @@
 package com.example.monopoly.controllers;
 
-import com.example.monopoly.services.EconomicService;
+import com.example.monopoly.services.exceptionService.EconomicService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
