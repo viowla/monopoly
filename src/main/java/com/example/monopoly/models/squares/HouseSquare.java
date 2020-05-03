@@ -3,9 +3,13 @@ package com.example.monopoly.models.squares;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.roles.Player;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Random;
 
+@Getter
+@Setter
 public class HouseSquare extends Square {
     int price;
     int owner = -1;
@@ -15,13 +19,13 @@ public class HouseSquare extends Square {
         this.price = price;
     }
 
-    public void setOwner(int owner) {
+    /*public void setOwner(int owner) {
         this.owner = owner;
     }
 
     public int getPrice() {
         return price;
-    }
+    }*/
 
     @Override
     public void doAction(Player player, Board board) {
