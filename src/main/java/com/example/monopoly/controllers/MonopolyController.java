@@ -10,6 +10,8 @@ public class MonopolyController {
     Dice die = new Dice();
     Board board;
 
+    // red methods are lombok getter/setter methods
+
     public MonopolyController(int totalPlayer) {
         board = new Board(totalPlayer);
     }

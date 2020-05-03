@@ -43,11 +43,16 @@ public class Player implements UserDetails {
 
     public int tossDie(Dice die) {
         int face = die.getFace();
+
+        // getName() lombok
         Observer.print(this, getName() + " toss a die... Face is " + face);
         return face;
     }
 
 
+    public void nextTurn() {
+        totalWalk++;
+    }
 
     @Override
     public boolean isAccountNonExpired() {

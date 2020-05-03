@@ -17,7 +17,7 @@ public class Board {
         players = new Player[totalPlayer];
         this.totalPlayer = totalPlayer;
         for(int i = 0;i < players.length;i++){
-            players[i] = new Player(i, "Player " + (i + 1));
+            players[i] = new Player((long) i, "Player " + (i + 1));
         }
         Random rand = new Random();
         for(int i = 0;i < squares.length;i++){
@@ -40,6 +40,7 @@ public class Board {
     }
 
     public Square movePlayer(Player player, int face, boolean count) {
+        // isBrokeOut(), getCurrentPosition(), setPosition(), getName(), getMoney(), setBrokeOut() method lombok in Player class
         if(player.isBrokeOut()){ return squares[player.getCurrentPosition()]; }
         int newPosition = normalizePosition(player.getCurrentPosition() + face);
         player.setPosition(newPosition);
@@ -59,6 +60,7 @@ public class Board {
     public boolean hasWinner() {
         int ingame = 0;
         for(Player player:players){
+            // isBrokeOut() method lombok in Player class
             if(!player.isBrokeOut()){
                 ingame++;
             }
@@ -69,6 +71,7 @@ public class Board {
     public Player getWinner() {
         if(!hasWinner()){ return null; }
         for(Player player:players){
+            // isBrokeOut() method lombok in Player class
             if(!player.isBrokeOut()){ return player; }
         }
         return null;
@@ -77,6 +80,7 @@ public class Board {
     public Player getMaxMoneyPlayer() {
         Player maxplayer = null;
         for(Player player:players){
+            // getMoney() method lombok in Player class
             if(maxplayer == null || maxplayer.getMoney().getMoney() < player.getMoney().getMoney()){
                 maxplayer = player;
             }
