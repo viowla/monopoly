@@ -14,10 +14,6 @@ public class Bank {
         this.money = money;
     }
 
-    public int getMoney() {
-        return money;
-    }
-
     public void addMoney(int amount) {
         money += amount;
     }
@@ -30,4 +26,9 @@ public class Bank {
     public boolean isBrokeOut() {
         return money < 0;
     }
+
+    /*--------------------------*/
+    /*public int getMoney() {
+        return money;
+    }*/
 }

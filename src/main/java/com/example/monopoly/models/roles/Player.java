@@ -89,8 +89,8 @@ public class Player implements UserDetails {
     }
 
 
-    /*--------------------------*/
-    public int getCurrentPosition() {
+    /*-----------Getter/Setter---------------*/
+    /*public int getCurrentPosition() {
         return position;
     }
 
@@ -120,15 +120,15 @@ public class Player implements UserDetails {
 
     public int getTotalWalk() {
         return totalWalk;
-    }
+    }*/
 
-    /*---------------------------*/
+    /*------------Setter username/password---------------*/
 
-    public void setPassword(String password) {
+    /*public void setPassword(String password) {
         this.password = password;
 }
 
     public void setUsername(String username) {
         this.username = username;
-    }
+    }*/
 }
