@@ -34,13 +34,13 @@ public class HouseSquare extends Square {
             Random rand = new Random();
             if(rand.nextBoolean()){
                 Observer.print(player, player.getName() + " buy " + getName() + " for " + price);
-                owner = Math.toIntExact(player.getID());
+                owner = Math.toIntExact(player.getId());
                 player.getMoney().substractMoney(price);
             }else{
                 Observer.print(player, player.getName() + " don't want to buy " + getName());
             }
         }else{
-            if(owner != player.getID()){
+            if(owner != player.getId()){
                 int lost = price * 70 / 100;
                 Observer.print(player, player.getName() + " lost " + lost + " money to " + board.getPlayer(owner).getName());
                 player.getMoney().substractMoney(lost);
