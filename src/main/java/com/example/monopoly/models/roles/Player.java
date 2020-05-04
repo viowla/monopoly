@@ -109,11 +109,11 @@ public class Player implements UserDetails {
     public Long getID() {
         return id;
     }
-
+*/
     public void setBrokeOut(boolean brokeout) {
         this.brokeout = brokeout;
     }
-*/
+
     public boolean isBrokeOut() {
         return brokeout;
     }

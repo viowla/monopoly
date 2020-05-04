@@ -42,11 +42,11 @@ public class Board {
     public Square movePlayer(Player player, int face, boolean count) {
         // isBrokeOut(), getCurrentPosition(), setPosition(), getName(), getMoney(), setBrokeOut() method lombok in Player class
         if(player.isBrokeOut()){
-            return squares[player.getCurrentPosition()];
+            return squares[player.getPosition()];
         }
-        int newPosition = normalizePosition(player.getCurrentPosition() + face);
+        int newPosition = normalizePosition(player.getPosition() + face);
         player.setPosition(newPosition);
-        Observer.print(player, player.getName() + " goes to " + squares[player.getCurrentPosition()].getName());
+        Observer.print(player, player.getName() + " goes to " + squares[player.getPosition()].getName());
         squares[newPosition].doAction(player, this);
         if(player.getMoney().isBrokeOut()){
             Observer.print(player, player.getName() + " has been broke out!");
