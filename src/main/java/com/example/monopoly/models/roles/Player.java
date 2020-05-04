@@ -113,11 +113,11 @@ public class Player implements UserDetails {
     public void setBrokeOut(boolean brokeout) {
         this.brokeout = brokeout;
     }
-
+*/
     public boolean isBrokeOut() {
         return brokeout;
     }
-
+/*
     public int getTotalWalk() {
         return totalWalk;
     }*/
