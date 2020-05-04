@@ -1,6 +1,5 @@
 package com.example.monopoly.models.squares;
 
-import com.example.monopoly.controllers.BoardController;
 import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.roles.Player;
