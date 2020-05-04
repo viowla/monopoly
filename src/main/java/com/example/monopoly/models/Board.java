@@ -91,14 +91,17 @@ public class Board {
     }
 
     public int normalizePosition(int position) {
+
         return position % squares.length;
     }
 
     public Player getCurrentPlayer() {
+
         return players[currentTurn];
     }
 
     public Player[] getPlayers() {
+
         return players;
     }
 
