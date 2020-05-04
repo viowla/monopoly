@@ -20,6 +20,8 @@ public class Roles implements GrantedAuthority {
     @ManyToMany
     private Player player;
 
+    /*------------------Getter/Setter-----------------*/
+
   /*  public Long getId() {
         return id;
     }
