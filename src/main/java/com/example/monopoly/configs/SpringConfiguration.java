@@ -19,7 +19,7 @@ public class SpringConfiguration {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("kz.iitu.monopoly"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.monopoly"))
                 .paths(PathSelectors.ant("/api/*"))
                 .build();
     }
