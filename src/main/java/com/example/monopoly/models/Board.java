@@ -41,7 +41,9 @@ public class Board {
 
     public Square movePlayer(Player player, int face, boolean count) {
         // isBrokeOut(), getCurrentPosition(), setPosition(), getName(), getMoney(), setBrokeOut() method lombok in Player class
-        if(player.isBrokeOut()){ return squares[player.getCurrentPosition()]; }
+        if(player.isBrokeOut()){
+            return squares[player.getCurrentPosition()];
+        }
         int newPosition = normalizePosition(player.getCurrentPosition() + face);
         player.setPosition(newPosition);
         Observer.print(player, player.getName() + " goes to " + squares[player.getCurrentPosition()].getName());
