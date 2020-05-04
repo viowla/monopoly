@@ -1,9 +1,6 @@
 package com.example.monopoly;
 
 import com.example.monopoly.controllers.MonopolyController;
-import com.example.monopoly.models.Board;
-import com.example.monopoly.models.Dice;
-import com.example.monopoly.models.roles.Player;
 
 import java.util.Scanner;
 
