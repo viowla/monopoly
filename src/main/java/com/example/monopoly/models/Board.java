@@ -75,7 +75,6 @@ public class Board {
     public Player getWinner() {
         if(!hasWinner()){ return null; }
         for(Player player:players){
-            // isBrokeOut() method lombok in Player class
             if(!player.isBrokeOut()){ return player; }
         }
         return null;
@@ -84,7 +83,6 @@ public class Board {
     public Player getMaxMoneyPlayer() {
         Player maxplayer = null;
         for(Player player:players){
-            // getMoney() method lombok in Player class
             if(maxplayer == null || maxplayer.getMoney().getMoney() < player.getMoney().getMoney()){
                 maxplayer = player;
             }
@@ -101,11 +99,6 @@ public class Board {
 
         return players[currentTurn];
     }
-
-   /* public Player[] getPlayers() {
-
-        return players;
-    }*/
 
     public void nextTurn() {
         if(++currentTurn >= players.length){

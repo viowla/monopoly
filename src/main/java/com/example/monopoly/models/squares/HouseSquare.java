@@ -42,9 +42,9 @@ public class HouseSquare extends Square {
         }else{
             if(owner != player.getId()){
                 int lost = price * 70 / 100;
-                Observer.print(player, player.getName() + " lost " + lost + " money to " + board.getPlayer(owner).getName());
+                Observer.print(player, player.getName() + " lost " + lost + " money to " + board.getPlayer((long) owner).getName());
                 player.getMoney().substractMoney(lost);
-                board.getPlayer(owner).getMoney().addMoney(lost);
+                board.getPlayer((long) owner).getMoney().addMoney(lost);
             }
         }
     }

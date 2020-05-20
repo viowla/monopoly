@@ -4,6 +4,7 @@ package com.example.monopoly.controllers;
 import com.example.monopoly.models.Board;
 import com.example.monopoly.models.Dice;
 import com.example.monopoly.models.roles.Player;
+import org.springframework.web.bind.annotation.GetMapping;
 
 public class MonopolyController {
 
@@ -16,6 +17,7 @@ public class MonopolyController {
         board = new Board(totalPlayer);
     }
 
+    @GetMapping("/start")
     public void startGame() {
         System.out.println("Game start!");
         System.out.println("========");
@@ -35,6 +37,7 @@ public class MonopolyController {
         System.out.println("Game over!");
     }
 
+    @GetMapping("/end")
     public boolean isGameEnd() {
         for(Player player:board.getPlayers()){
             if(player.getTotalWalk() < 20){ return false; }
