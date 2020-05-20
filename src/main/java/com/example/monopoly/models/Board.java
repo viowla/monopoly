@@ -3,12 +3,14 @@ package com.example.monopoly.models;
 import com.example.monopoly.models.roles.Observer;
 import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.models.squares.*;
+import lombok.Getter;
 
 import java.util.Random;
 
 public class Board {
     int currentTurn = 0;
     int totalPlayer = 0;
+    @Getter
     Player[] players;
     Square[] squares = new Square[40];
     String[] names = new String[] { "House", "Villa", "Town", "City", "Peace", "Village", "Jade", "Soi 4", "White", "Dark" };
@@ -100,10 +102,10 @@ public class Board {
         return players[currentTurn];
     }
 
-    public Player[] getPlayers() {
+   /* public Player[] getPlayers() {
 
         return players;
-    }
+    }*/
 
     public void nextTurn() {
         if(++currentTurn >= players.length){
@@ -111,8 +113,8 @@ public class Board {
         }
     }
 
-    public Player getPlayer(int id) {
-        return players[id];
+    public Player getPlayer(Long id) {
+        return players[Math.toIntExact(id)];
     }
 
     public int getTotalSquare() {
