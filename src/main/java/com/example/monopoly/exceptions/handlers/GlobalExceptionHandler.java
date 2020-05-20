@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = FreeRentException.class)
-    public ResponseEntity<ErrorResponse> handleDivideByZeroException(FreeRentException e) {
+    public ResponseEntity<ErrorResponse> handleFreeRentException(FreeRentException e) {
         log.error("Exception handled: "+ e.getMessage(), e);
         ErrorResponse errorResponse = new ErrorResponse("FREE_RENT", e.getMessage());
 
