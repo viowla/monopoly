@@ -17,6 +17,9 @@ public class BoardController {
     @Autowired
     private PlayerRepository playerRepository;
 
+    @Autowired
+    private BoardRepository boardRepository;
+
     Board board = new Board((int) playerRepository.count());
 
     @GetMapping("/winner")
@@ -32,6 +35,16 @@ public class BoardController {
     @GetMapping("/position")
     public int position(@RequestBody int position){
         return board.normalizePosition(position);
+    }
+
+    @GetMapping("/has_winner")
+    public boolean hasWinner(){
+        return  boardRepository.hasWinner();
+    }
+
+    @GetMapping("/next_turn")
+    public void nextTurn(){
+        boardRepository.nextTurn();
     }
 
 }
