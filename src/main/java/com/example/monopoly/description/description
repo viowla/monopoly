@@ -1,0 +1,13 @@
+Monopoly
+
+The theme of my project is monopoly.
+
+Programming language - java spring framework
+
+Short description: 2-8 players participate in the game. on the field there are cells with houses, a prison, a start,
+free parking and a cell "send to prison."
+At the beginning of the game, the bank gives each player a certain amount of money (5000).
+On these money players can make money in cells with houses, pay fines, for example, if they get to the cell
+"send to prison", pay rent if the player gets into a busy cell. The player cannot reject the rental
+payment process; the player can either pay the set amount or, if there is a shortage of money,
+goes to jail. the game continues until one of the players goes bankrupt
