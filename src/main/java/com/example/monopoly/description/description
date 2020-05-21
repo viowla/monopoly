@@ -31,3 +31,6 @@ Configurations:
 -Jwt token config(auth+generate)
 -Security(web security adapter)
 -Spring(Docket api)
+
+Exceptions:
+-Free rent exception(Impossible not to pay rent)
