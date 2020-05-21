@@ -2,7 +2,7 @@ Monopoly
 
 The theme of my project is monopoly.
 
-Programming language - java spring framework
+Programming language - Java Spring framework
 
 Short description: 2-8 players participate in the game. on the field there are cells with houses, a prison, a start,
 free parking and a cell "send to prison."
@@ -27,3 +27,7 @@ Controllers:
 -monopoly(controller)
 -API controller
 
+Configurations:
+-Jwt token config(auth+generate)
+-Security(web security adapter)
+-Spring(Docket api)
