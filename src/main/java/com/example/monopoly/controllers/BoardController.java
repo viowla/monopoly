@@ -5,10 +5,7 @@ import com.example.monopoly.models.roles.Player;
 import com.example.monopoly.repositories.BoardRepository;
 import com.example.monopoly.repositories.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/board")
@@ -45,6 +42,16 @@ public class BoardController {
     @GetMapping("/next_turn")
     public void nextTurn(){
         boardRepository.nextTurn();
+    }
+
+    @PutMapping("/")
+    public Board saveChanges(@RequestBody Board board){
+      return   boardRepository.saveAndFlush(board);
+    }
+
+    @DeleteMapping("/")
+    public void delete(){
+        boardRepository.deleteAll();
     }
 
 }
