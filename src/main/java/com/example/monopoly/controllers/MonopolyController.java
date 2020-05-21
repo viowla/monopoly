@@ -30,9 +30,9 @@ public class MonopolyController {
         }
         System.out.println("========");
         if(board.hasWinner()){
-            System.out.println(board.getWinner().getName() + " is won by don't brokeout!");
+            System.out.println(board.getWinner().getUsername() + " is won by don't brokeout!");
         }else{
-            System.out.println(board.getMaxMoneyPlayer().getName() + " is won by have most money!");
+            System.out.println(board.getMaxMoneyPlayer().getUsername() + " is won by have most money!");
         }
         System.out.println("Game over!");
     }

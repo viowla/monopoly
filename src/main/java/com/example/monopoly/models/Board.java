@@ -48,10 +48,10 @@ public class Board {
         }
         int newPosition = normalizePosition(player.getPosition() + face);
         player.setPosition(newPosition);
-        Observer.print(player, player.getName() + " goes to " + squares[player.getPosition()].getName());
+        Observer.print(player, player.getUsername() + " goes to " + squares[player.getPosition()].getName());
         squares[newPosition].doAction(player, this);
         if(player.getMoney().isBrokeOut()){
-            Observer.print(player, player.getName() + " has been broke out!");
+            Observer.print(player, player.getUsername() + " has been broke out!");
             player.setBrokeOut(true);
         }else{
             if(count){

@@ -30,19 +30,19 @@ public class HouseSquare extends Square {
     @Override
     public void doAction(Player player, Board board) {
         if(owner < 0){
-            Observer.print(player, player.getName() + ", do you want to buy " + getName() + "?");
+            Observer.print(player, player.getUsername() + ", do you want to buy " + getName() + "?");
             Random rand = new Random();
             if(rand.nextBoolean()){
-                Observer.print(player, player.getName() + " buy " + getName() + " for " + price);
+                Observer.print(player, player.getUsername() + " buy " + getName() + " for " + price);
                 owner = Math.toIntExact(player.getId());
                 player.getMoney().substractMoney(price);
             }else{
-                Observer.print(player, player.getName() + " don't want to buy " + getName());
+                Observer.print(player, player.getUsername() + " don't want to buy " + getName());
             }
         }else{
             if(owner != player.getId()){
                 int lost = price * 70 / 100;
-                Observer.print(player, player.getName() + " lost " + lost + " money to " + board.getPlayer((long) owner).getName());
+                Observer.print(player, player.getUsername() + " lost " + lost + " money to " + board.getPlayer((long) owner).getUsername());
                 player.getMoney().substractMoney(lost);
                 board.getPlayer((long) owner).getMoney().addMoney(lost);
             }

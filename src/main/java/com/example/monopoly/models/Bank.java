@@ -27,8 +27,4 @@ public class Bank {
         return money < 0;
     }
 
-    /*--------------------------*/
-    /*public int getMoney() {
-        return money;
-    }*/
 }

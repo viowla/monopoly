@@ -35,7 +35,7 @@ public class Player implements UserDetails {
     @OneToOne
     Bank money = new Bank(5000);
 
-    public Player(Long id) {
+    public Player(Long id, String s) {
         this.id = id;
     }
 
