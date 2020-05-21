@@ -21,16 +21,19 @@ public class BoardController {
 
     @GetMapping("/winner")
     public Player getWinner(){
+
         return board.getWinner();
     }
 
     @GetMapping("/max_money")
     public Player getMaxMoneyPlayer() {
+
         return board.getMaxMoneyPlayer();
     }
 
     @GetMapping("/position")
     public int position(@RequestBody int position){
+
         return board.normalizePosition(position);
     }
 
