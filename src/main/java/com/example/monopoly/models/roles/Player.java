@@ -19,7 +19,6 @@ public class Player implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name;
     boolean brokeout = false;
 
     @Column(unique = true)
@@ -36,16 +35,15 @@ public class Player implements UserDetails {
     @OneToOne
     Bank money = new Bank(5000);
 
-    public Player(Long id, String name) {
+    public Player(Long id) {
         this.id = id;
-        this.name = name;
     }
 
     public int tossDie(Dice die) {
         int face = die.getFace();
 
         // getName() lombok
-        Observer.print(this, getName() + " toss a die... Face is " + face);
+        Observer.print(this, getUsername() + " toss a die... Face is " + face);
         return face;
     }
 
@@ -89,27 +87,6 @@ public class Player implements UserDetails {
     }
 
 
-    /*-----------Getter/Setter---------------*/
-    /*public int getCurrentPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Bank getMoney() {
-        return money;
-    }
-
-    public Long getID() {
-        return id;
-    }
-*/
     public void setBrokeOut(boolean brokeout) {
         this.brokeout = brokeout;
     }
@@ -117,18 +94,5 @@ public class Player implements UserDetails {
     public boolean isBrokeOut() {
         return brokeout;
     }
-/*
-    public int getTotalWalk() {
-        return totalWalk;
-    }*/
 
-    /*------------Setter username/password---------------*/
-
-    /*public void setPassword(String password) {
-        this.password = password;
-}
-
-    public void setUsername(String username) {
-        this.username = username;
-    }*/
 }
