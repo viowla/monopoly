@@ -10,4 +10,20 @@ At the beginning of the game, the bank gives each player a certain amount of mon
 On these money players can make money in cells with houses, pay fines, for example, if they get to the cell
 "send to prison", pay rent if the player gets into a busy cell. The player cannot reject the rental
 payment process; the player can either pay the set amount or, if there is a shortage of money,
-goes to jail. the game continues until one of the players goes bankrupt
+goes to jail. the game continues until one of the players goes bankrupt.
+
+MVC Java Spring template was used
+
+Models:
+-Player
+-Square
+-Observer(admin)
+-Dice
+-Board
+
+Controllers:
+-player(repository+controller)
+-board(repository+controller)
+-monopoly(controller)
+-API controller
+
