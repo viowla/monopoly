@@ -20,6 +20,9 @@ public class Roles implements GrantedAuthority {
     @ManyToMany
     private Player player;
 
+    @ManyToMany
+    private Observer observer;
+
     @Override
     public String getAuthority() {
         return name;
